@@ -1,0 +1,110 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
+@mixin strips{
+  background:black;
+  text-align:left;
+  padding: 10px 10px 0 30px;
+  color: white;
+}
+
+@mixin navStrip{
+  background:#806800;
+  font-family: 'Titan One';
+  list-style: none;
+  font-size:25px;
+  display: inline-flex;
+  padding:0 0 0 22em;
+  position:static;
+
+}
+// styling the home/index page
+body{
+  display: grid;
+  grid-template-areas:
+    'nav1 nav1 nav1 nav1 nav1'
+    'header header header header header '
+    'nav2 nav2 nav2 nav2 nav2'
+    'home home home home home'
+    'footer footer footer footer footer'
+   ;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-rows:2em 8em 2em 1fr;
+  grid-gap: 5px; ;
+
+  font-family: 'Rock Salt';
+}
+
+
+nav:nth-last-of-type(2) {
+  grid-area: nav1;
+  @include navStrip;
+
+}
+
+header{
+  grid-area: header;
+  @include strips;
+  padding: 0;
+  background: white;
+  text-align: left;
+
+  p{
+    float: right;
+    color: black;
+    font-size: 2em;
+    padding-right: 1em;
+
+  }
+  img{
+    height: 130px;
+    width: 50%;
+
+  }
+}
+
+nav{
+  grid-area: nav2;
+  @include navStrip;
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover{
+    color:#a2a90d;
+  }
+}
+
+
+section.home{
+  grid-area:home;
+  padding: 40px 100px 160px 100px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  // height:65em;
+
+  p{
+    font-size: 40px;
+    text-align: left;
+    font-family: fantasy;
+    color: white;
+  }
+
+    img {
+    height: 300px;
+    width: 420px;
+    border-style: solid;
+    border-color:yellow;
+    border-width: 4px;
+  }
+}
+
+
+  footer{
+    grid-area:footer;
+    @include strips;
+  }

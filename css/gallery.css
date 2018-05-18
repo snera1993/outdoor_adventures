@@ -1,0 +1,79 @@
+/*fonts*/
+@import url("https://fonts.googleapis.com/css?family=Titan+One");
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt");
+body {
+  display: grid;
+  grid-template-areas: "nav1 nav1 nav1 nav1 nav1" "header header header header header " "nav2 nav2 nav2 nav2 nav2" "home home home home home" "footer footer footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2em 8em 2em 1fr;
+  grid-gap: 5px;
+  font-family: 'Rock Salt'; }
+
+nav:nth-last-of-type(2) {
+  grid-area: nav1;
+  background: #806800;
+  font-family: 'Titan One';
+  list-style: none;
+  font-size: 25px;
+  display: inline-flex;
+  padding: 0 0 0 22em;
+  position: static; }
+
+header {
+  grid-area: header;
+  background: black;
+  text-align: left;
+  padding: 10px 10px 0 30px;
+  color: white;
+  padding: 0;
+  background: white;
+  text-align: left; }
+  header p {
+    float: right;
+    color: black;
+    font-size: 2em;
+    padding-right: 1em; }
+  header img {
+    height: 130px;
+    width: 50%; }
+
+nav {
+  grid-area: nav2;
+  background: #806800;
+  font-family: 'Titan One';
+  list-style: none;
+  font-size: 25px;
+  display: inline-flex;
+  padding: 0 0 0 22em;
+  position: static; }
+  nav a {
+    text-decoration: none;
+    color: white; }
+  nav a:hover {
+    color: #a2a90d; }
+
+section.home {
+  grid-area: home;
+  padding: 40px 100px 160px 100px;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  section.home p {
+    font-size: 40px;
+    text-align: left;
+    font-family: fantasy;
+    color: white; }
+  section.home img {
+    height: 300px;
+    width: 420px;
+    border-style: solid;
+    border-color: yellow;
+    border-width: 4px; }
+
+footer {
+  grid-area: footer;
+  background: black;
+  text-align: left;
+  padding: 10px 10px 0 30px;
+  color: white; }
+
+/*# sourceMappingURL=gallery.css.map */
