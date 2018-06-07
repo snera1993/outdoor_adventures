@@ -7,7 +7,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 2em 8em 2em 1fr 1fr 1fr 1fr 1fr 8em;
   grid-gap: 5px;
-  background-image: url("Images/bluesky.jpg");
   font-family: 'Rock Salt'; }
 
 nav:nth-last-of-type(2) {
@@ -17,7 +16,7 @@ nav:nth-last-of-type(2) {
   list-style: none;
   font-size: 25px;
   display: inline-flex;
-  padding: 0 0 0 14em; }
+  padding: 0 0 0 16em; }
 
 header {
   grid-area: header;
@@ -34,7 +33,7 @@ header {
     font-size: 2em;
     padding-right: 1em; }
   header img {
-    height: 130px;
+    height: 127px;
     width: 50%; }
 
 nav {
@@ -44,11 +43,14 @@ nav {
   list-style: none;
   font-size: 25px;
   display: inline-flex;
-  padding: 0 0 0 14em; }
+  padding: 0 0 0 16em; }
   nav a {
     text-decoration: none;
-    color: white; }
+    color: white;
+    text-shadow: black 1px 1px 3px; }
   nav a:hover {
+    text-shadow: black 4px 4px 8px; }
+  nav a:active {
     color: #a2a90d; }
   nav .dropdown {
     position: relative;
@@ -67,7 +69,7 @@ nav {
 
 section.home {
   grid-area: home;
-  padding: 3px 100px 100px 100px;
+  padding: 3px 0px 100px 200px;
   background-size: cover;
   background-repeat: no-repeat;
   height: 65em;
@@ -75,25 +77,31 @@ section.home {
   section.home p {
     font-size: 40px;
     color: white;
-    text-align: left; }
+    text-align: center;
+    background: #80808099;
+    border-radius: 20px;
+    padding: 1rem;
+    width: 20%; }
   section.home p:nth-last-of-type(2) {
     font-family: fantasy;
     color: white;
     font-size: 50px;
     text-align: center; }
   section.home .pictures {
-    height: 400px;
-    width: 600px;
+    height: 350px;
+    width: 500px;
     border-style: solid;
     border-color: #a2a90d;
-    border-width: 4px;
+    box-shadow: black 13px 13px 9px;
+    border-width: 1px;
     background-size: cover;
     text-align: center;
     color: white;
     font-size: 50px;
-    float: left; }
+    float: left;
+    text-shadow: black 3px 3px 5px; }
   section.home .hiking {
-    height: 420px;
+    height: 400px;
     width: 620px;
     float: left; }
 
@@ -102,16 +110,17 @@ section.hike {
   padding: 3px 100px 100px 100px;
   background-size: cover;
   height: 65em; }
-  section.hike p {
+  section.hike h2 {
     font-size: 40px;
     color: white;
-    text-align: left; }
-  section.hike p:nth-last-of-type(1) {
+    text-align: left;
+    text-shadow: #0ace90 3px 3px; }
+  section.hike p {
     background: #808080ab;
     font-family: fantasy;
     color: white;
     font-size: 30px;
-    border-radius: 5%;
+    border-radius: 50px;
     padding: 30px; }
   section.hike img {
     height: 300px;
@@ -125,16 +134,17 @@ section.fishing {
   padding: 3px 100px 100px 100px;
   background-size: cover;
   height: 65em; }
-  section.fishing p {
+  section.fishing h2 {
     font-size: 40px;
     color: white;
-    text-align: left; }
-  section.fishing p:nth-last-of-type(1) {
+    text-align: left;
+    text-shadow: blue 3px 3px; }
+  section.fishing p {
     background: #808080ab;
     font-family: fantasy;
     color: white;
     font-size: 30px;
-    border-radius: 5%;
+    border-radius: 50px;
     padding: 30px; }
   section.fishing img {
     height: 300px;
@@ -148,16 +158,17 @@ section.camping {
   padding: 3px 100px 100px 100px;
   background-size: cover;
   height: 65em; }
-  section.camping p {
+  section.camping h2 {
     font-size: 40px;
     color: white;
-    text-align: left; }
-  section.camping p:nth-last-of-type(1) {
+    text-align: left;
+    text-shadow: orange 3px 3px; }
+  section.camping p {
     background: #808080ab;
     font-family: fantasy;
     color: white;
     font-size: 30px;
-    border-radius: 5%;
+    border-radius: 50px;
     padding: 30px; }
   section.camping img {
     height: 300px;
@@ -171,16 +182,17 @@ section.rockclimbing {
   padding: 3px 100px 100px 100px;
   background-size: cover;
   height: 65em; }
-  section.rockclimbing p {
+  section.rockclimbing h2 {
     font-size: 40px;
     color: white;
+    text-shadow: brown 3px 3px;
     text-align: left; }
   section.rockclimbing p:nth-last-of-type(1) {
     background: #808080ab;
     font-family: fantasy;
     color: white;
     font-size: 30px;
-    border-radius: 5%;
+    border-radius: 50px;
     padding: 30px; }
   section.rockclimbing img {
     height: 300px;
@@ -195,5 +207,838 @@ footer {
   text-align: left;
   padding: 10px 10px 0 30px;
   color: white; }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 600px) {
+  body {
+    display: grid;
+    grid-template-areas: "nav1 nav1 nav1 nav1 nav1" "header header header header header " "nav2 nav2 nav2 nav2 nav2" "home home home home home" "hiking hiking hiking hiking hiking" "fishing fishing fishing fishing fishing" "camping camping camping camping camping" "rockclimb rockclimb rockclimb rockclimb rockclimb" "footer footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2em 8em 2em 1fr 1fr 1fr 1fr 1fr 8em;
+    grid-gap: 5px;
+    font-family: 'Rock Salt'; }
+
+  nav:nth-last-of-type(2) {
+    grid-area: nav1;
+    background: #806800;
+    font-family: 'Titan One';
+    list-style: none;
+    font-size: 25px;
+    display: inline-flex;
+    padding: 0 0 0 16em; }
+
+  header {
+    grid-area: header;
+    background: black;
+    text-align: left;
+    padding: 10px 10px 0 30px;
+    color: white;
+    padding: 0;
+    background: white;
+    text-align: center; }
+    header p {
+      float: right;
+      color: black;
+      font-size: 2em;
+      padding-right: 1em; }
+    header img {
+      height: 127px;
+      width: 50%; }
+
+  nav {
+    grid-area: nav2;
+    background: #806800;
+    font-family: 'Titan One';
+    list-style: none;
+    font-size: 25px;
+    display: inline-flex;
+    padding: 0 0 0 16em; }
+    nav a {
+      text-decoration: none;
+      color: white;
+      text-shadow: black 1px 1px 3px; }
+    nav a:hover {
+      text-shadow: black 4px 4px 8px; }
+    nav a:active {
+      color: #a2a90d; }
+    nav .dropdown {
+      position: relative;
+      display: inline-block; }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #806800a1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 4px 32px 1px 2px;
+      z-index: 1;
+      list-style: none; }
+    nav .dropdown:hover .dropdown-content {
+      display: block; }
+
+  section.home {
+    grid-area: home;
+    padding: 3px 0px 100px 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65em;
+    font-family: fantasy; }
+    section.home p {
+      font-size: 40px;
+      color: white;
+      text-align: center;
+      background: #80808099;
+      border-radius: 20px;
+      padding: 1rem;
+      width: 20%; }
+    section.home p:nth-last-of-type(2) {
+      font-family: fantasy;
+      color: white;
+      font-size: 50px;
+      text-align: center; }
+    section.home .pictures {
+      height: 350px;
+      width: 500px;
+      border-style: solid;
+      border-color: #a2a90d;
+      box-shadow: black 13px 13px 9px;
+      border-width: 1px;
+      background-size: cover;
+      text-align: center;
+      color: white;
+      font-size: 50px;
+      float: left;
+      text-shadow: black 3px 3px 5px; }
+    section.home .hiking {
+      height: 400px;
+      width: 620px;
+      float: left; }
+
+  section.hike {
+    grid-area: hiking;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.hike h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: #0ace90 3px 3px; }
+    section.hike p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.hike img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.fishing {
+    grid-area: fishing;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.fishing h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: blue 3px 3px; }
+    section.fishing p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.fishing img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.camping {
+    grid-area: camping;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.camping h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: orange 3px 3px; }
+    section.camping p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.camping img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.rockclimbing {
+    grid-area: rockclimb;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.rockclimbing h2 {
+      font-size: 40px;
+      color: white;
+      text-shadow: brown 3px 3px;
+      text-align: left; }
+    section.rockclimbing p:nth-last-of-type(1) {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.rockclimbing img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  footer {
+    grid-area: footer;
+    background: black;
+    text-align: left;
+    padding: 10px 10px 0 30px;
+    color: white; } }
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+  body {
+    display: grid;
+    grid-template-areas: "nav1 nav1 nav1 nav1 nav1" "header header header header header " "nav2 nav2 nav2 nav2 nav2" "home home home home home" "hiking hiking hiking hiking hiking" "fishing fishing fishing fishing fishing" "camping camping camping camping camping" "rockclimb rockclimb rockclimb rockclimb rockclimb" "footer footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2em 8em 2em 1fr 1fr 1fr 1fr 1fr 8em;
+    grid-gap: 5px;
+    font-family: 'Rock Salt'; }
+
+  nav:nth-last-of-type(2) {
+    grid-area: nav1;
+    background: #806800;
+    font-family: 'Titan One';
+    list-style: none;
+    font-size: 25px;
+    display: inline-flex;
+    padding: 0 0 0 16em; }
+
+  header {
+    grid-area: header;
+    background: black;
+    text-align: left;
+    padding: 10px 10px 0 30px;
+    color: white;
+    padding: 0;
+    background: white;
+    text-align: center; }
+    header p {
+      float: right;
+      color: black;
+      font-size: 2em;
+      padding-right: 1em; }
+    header img {
+      height: 127px;
+      width: 50%; }
+
+  nav {
+    grid-area: nav2;
+    background: #806800;
+    font-family: 'Titan One';
+    list-style: none;
+    font-size: 25px;
+    display: inline-flex;
+    padding: 0 0 0 16em; }
+    nav a {
+      text-decoration: none;
+      color: white;
+      text-shadow: black 1px 1px 3px; }
+    nav a:hover {
+      text-shadow: black 4px 4px 8px; }
+    nav a:active {
+      color: #a2a90d; }
+    nav .dropdown {
+      position: relative;
+      display: inline-block; }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #806800a1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 4px 32px 1px 2px;
+      z-index: 1;
+      list-style: none; }
+    nav .dropdown:hover .dropdown-content {
+      display: block; }
+
+  section.home {
+    grid-area: home;
+    padding: 3px 0px 100px 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65em;
+    font-family: fantasy; }
+    section.home p {
+      font-size: 40px;
+      color: white;
+      text-align: center;
+      background: #80808099;
+      border-radius: 20px;
+      padding: 1rem;
+      width: 20%; }
+    section.home p:nth-last-of-type(2) {
+      font-family: fantasy;
+      color: white;
+      font-size: 50px;
+      text-align: center; }
+    section.home .pictures {
+      height: 350px;
+      width: 500px;
+      border-style: solid;
+      border-color: #a2a90d;
+      box-shadow: black 13px 13px 9px;
+      border-width: 1px;
+      background-size: cover;
+      text-align: center;
+      color: white;
+      font-size: 50px;
+      float: left;
+      text-shadow: black 3px 3px 5px; }
+    section.home .hiking {
+      height: 400px;
+      width: 620px;
+      float: left; }
+
+  section.hike {
+    grid-area: hiking;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.hike h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: #0ace90 3px 3px; }
+    section.hike p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.hike img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.fishing {
+    grid-area: fishing;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.fishing h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: blue 3px 3px; }
+    section.fishing p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.fishing img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.camping {
+    grid-area: camping;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.camping h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: orange 3px 3px; }
+    section.camping p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.camping img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.rockclimbing {
+    grid-area: rockclimb;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.rockclimbing h2 {
+      font-size: 40px;
+      color: white;
+      text-shadow: brown 3px 3px;
+      text-align: left; }
+    section.rockclimbing p:nth-last-of-type(1) {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.rockclimbing img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  footer {
+    grid-area: footer;
+    background: black;
+    text-align: left;
+    padding: 10px 10px 0 30px;
+    color: white; } }
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+  body {
+    display: grid;
+    grid-template-areas: "nav1 nav1 nav1 nav1 nav1" "header header header header header " "nav2 nav2 nav2 nav2 nav2" "home home home home home" "hiking hiking hiking hiking hiking" "fishing fishing fishing fishing fishing" "camping camping camping camping camping" "rockclimb rockclimb rockclimb rockclimb rockclimb" "footer footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2em 8em 2em 1fr 1fr 1fr 1fr 1fr 8em;
+    grid-gap: 5px;
+    font-family: 'Rock Salt'; }
+
+  nav:nth-last-of-type(2) {
+    grid-area: nav1;
+    background: #806800;
+    font-family: 'Titan One';
+    list-style: none;
+    font-size: 25px;
+    display: inline-flex;
+    padding: 0 0 0 16em; }
+
+  header {
+    grid-area: header;
+    background: black;
+    text-align: left;
+    padding: 10px 10px 0 30px;
+    color: white;
+    padding: 0;
+    background: white;
+    text-align: center; }
+    header p {
+      float: right;
+      color: black;
+      font-size: 2em;
+      padding-right: 1em; }
+    header img {
+      height: 127px;
+      width: 50%; }
+
+  nav {
+    grid-area: nav2;
+    background: #806800;
+    font-family: 'Titan One';
+    list-style: none;
+    font-size: 25px;
+    display: inline-flex;
+    padding: 0 0 0 16em; }
+    nav a {
+      text-decoration: none;
+      color: white;
+      text-shadow: black 1px 1px 3px; }
+    nav a:hover {
+      text-shadow: black 4px 4px 8px; }
+    nav a:active {
+      color: #a2a90d; }
+    nav .dropdown {
+      position: relative;
+      display: inline-block; }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #806800a1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 4px 32px 1px 2px;
+      z-index: 1;
+      list-style: none; }
+    nav .dropdown:hover .dropdown-content {
+      display: block; }
+
+  section.home {
+    grid-area: home;
+    padding: 3px 0px 100px 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65em;
+    font-family: fantasy; }
+    section.home p {
+      font-size: 40px;
+      color: white;
+      text-align: center;
+      background: #80808099;
+      border-radius: 20px;
+      padding: 1rem;
+      width: 20%; }
+    section.home p:nth-last-of-type(2) {
+      font-family: fantasy;
+      color: white;
+      font-size: 50px;
+      text-align: center; }
+    section.home .pictures {
+      height: 350px;
+      width: 500px;
+      border-style: solid;
+      border-color: #a2a90d;
+      box-shadow: black 13px 13px 9px;
+      border-width: 1px;
+      background-size: cover;
+      text-align: center;
+      color: white;
+      font-size: 50px;
+      float: left;
+      text-shadow: black 3px 3px 5px; }
+    section.home .hiking {
+      height: 400px;
+      width: 620px;
+      float: left; }
+
+  section.hike {
+    grid-area: hiking;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.hike h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: #0ace90 3px 3px; }
+    section.hike p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.hike img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.fishing {
+    grid-area: fishing;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.fishing h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: blue 3px 3px; }
+    section.fishing p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.fishing img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.camping {
+    grid-area: camping;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.camping h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: orange 3px 3px; }
+    section.camping p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.camping img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.rockclimbing {
+    grid-area: rockclimb;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.rockclimbing h2 {
+      font-size: 40px;
+      color: white;
+      text-shadow: brown 3px 3px;
+      text-align: left; }
+    section.rockclimbing p:nth-last-of-type(1) {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.rockclimbing img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  footer {
+    grid-area: footer;
+    background: black;
+    text-align: left;
+    padding: 10px 10px 0 30px;
+    color: white; } }
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (max-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-areas: "nav1 nav1 nav1 nav1 nav1" "header header header header header " "nav2 nav2 nav2 nav2 nav2" "home home home home home" "hiking hiking hiking hiking hiking" "fishing fishing fishing fishing fishing" "camping camping camping camping camping" "rockclimb rockclimb rockclimb rockclimb rockclimb" "footer footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2em 8em 2em 1fr 1fr 1fr 1fr 1fr 8em;
+    grid-gap: 5px;
+    font-family: 'Rock Salt'; }
+
+  nav:nth-last-of-type(2) {
+    grid-area: nav1;
+    background: #806800;
+    font-family: 'Titan One';
+    list-style: none;
+    font-size: 25px;
+    display: inline-flex;
+    padding: 0 0 0 16em; }
+
+  header {
+    grid-area: header;
+    background: black;
+    text-align: left;
+    padding: 10px 10px 0 30px;
+    color: white;
+    padding: 0;
+    background: white;
+    text-align: center; }
+    header p {
+      float: right;
+      color: black;
+      font-size: 2em;
+      padding-right: 1em; }
+    header img {
+      height: 127px;
+      width: 50%; }
+
+  nav {
+    grid-area: nav2;
+    background: #806800;
+    font-family: 'Titan One';
+    list-style: none;
+    font-size: 25px;
+    display: inline-flex;
+    padding: 0 0 0 16em; }
+    nav a {
+      text-decoration: none;
+      color: white;
+      text-shadow: black 1px 1px 3px; }
+    nav a:hover {
+      text-shadow: black 4px 4px 8px; }
+    nav a:active {
+      color: #a2a90d; }
+    nav .dropdown {
+      position: relative;
+      display: inline-block; }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #806800a1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 4px 32px 1px 2px;
+      z-index: 1;
+      list-style: none; }
+    nav .dropdown:hover .dropdown-content {
+      display: block; }
+
+  section.home {
+    grid-area: home;
+    padding: 3px 0px 100px 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65em;
+    font-family: fantasy; }
+    section.home p {
+      font-size: 40px;
+      color: white;
+      text-align: center;
+      background: #80808099;
+      border-radius: 20px;
+      padding: 1rem;
+      width: 20%; }
+    section.home p:nth-last-of-type(2) {
+      font-family: fantasy;
+      color: white;
+      font-size: 50px;
+      text-align: center; }
+    section.home .pictures {
+      height: 350px;
+      width: 500px;
+      border-style: solid;
+      border-color: #a2a90d;
+      box-shadow: black 13px 13px 9px;
+      border-width: 1px;
+      background-size: cover;
+      text-align: center;
+      color: white;
+      font-size: 50px;
+      float: left;
+      text-shadow: black 3px 3px 5px; }
+    section.home .hiking {
+      height: 400px;
+      width: 620px;
+      float: left; }
+
+  section.hike {
+    grid-area: hiking;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.hike h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: #0ace90 3px 3px; }
+    section.hike p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.hike img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.fishing {
+    grid-area: fishing;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.fishing h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: blue 3px 3px; }
+    section.fishing p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.fishing img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.camping {
+    grid-area: camping;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.camping h2 {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      text-shadow: orange 3px 3px; }
+    section.camping p {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.camping img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  section.rockclimbing {
+    grid-area: rockclimb;
+    padding: 3px 100px 100px 100px;
+    background-size: cover;
+    height: 65em; }
+    section.rockclimbing h2 {
+      font-size: 40px;
+      color: white;
+      text-shadow: brown 3px 3px;
+      text-align: left; }
+    section.rockclimbing p:nth-last-of-type(1) {
+      background: #808080ab;
+      font-family: fantasy;
+      color: white;
+      font-size: 30px;
+      border-radius: 50px;
+      padding: 30px; }
+    section.rockclimbing img {
+      height: 300px;
+      width: 400px;
+      border-style: solid;
+      border-color: yellow;
+      border-width: 4px; }
+
+  footer {
+    grid-area: footer;
+    background: black;
+    text-align: left;
+    padding: 10px 10px 0 30px;
+    color: white; } }
 
 /*# sourceMappingURL=home.css.map */

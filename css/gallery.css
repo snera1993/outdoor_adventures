@@ -34,7 +34,7 @@ header {
     font-size: 2em;
     padding-right: 1em; }
   header img {
-    height: 130px;
+    height: 127px;
     width: 50%; }
 
 nav {
@@ -48,8 +48,11 @@ nav {
   position: static; }
   nav a {
     text-decoration: none;
-    color: white; }
+    color: white;
+    text-shadow: black 1px 1px 3px; }
   nav a:hover {
+    text-shadow: black 4px 4px 8px; }
+  nav a:active {
     color: #a2a90d; }
 
 section.home {
@@ -65,9 +68,8 @@ section.home {
   section.home img {
     height: 300px;
     width: 420px;
-    border-style: solid;
-    border-color: yellow;
-    border-width: 4px; }
+    border: yellow 1px solid;
+    box-shadow: -7px 7px 8px; }
 
 footer {
   grid-area: footer;

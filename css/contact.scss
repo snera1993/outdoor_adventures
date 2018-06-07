@@ -16,8 +16,8 @@
   font-size:25px;
   display: inline-flex;
   padding:0 0 0 22em;
-
 }
+
 // styling the home/index page
 body{
   display: grid;
@@ -30,8 +30,8 @@ body{
    ;
 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-  grid-template-rows:2em 8em 2em 7fr 1fr;
-  grid-gap: 5px; ;
+  grid-template-rows:2em 8em 2em 7fr 8em;
+  grid-gap: 5px;
 
   font-family: 'Rock Salt';
   background-size: contain;
@@ -60,7 +60,7 @@ header{
   }
 
   img{
-    height: 130px;
+    height: 127px;
     width: 50%;
 
   }
@@ -73,11 +73,18 @@ nav{
   a{
     text-decoration: none;
     color: white;
+    text-shadow: black 1px 1px 3px;
   }
 
   a:hover{
-    color:#a2a90d;
+    // color:#a2a90d;
+    text-shadow: black 4px 4px 8px;
   }
+
+  a:active{
+    color: #a2a90d;
+  }
+
 }
 
 
@@ -90,6 +97,7 @@ section{
     font-size: 40px;
     color: white;
     text-align: left;
+    text-shadow: black 1px 1px 3px;
   }
 
 
@@ -106,16 +114,22 @@ section{
     background-color: #cab5b585;
     padding:6px 2em 1px 2em;
     width: 65%;
+    border-radius: 30px;
+    border: solid 1px white;
+    text-shadow: black 1px 1px 3px;
+
   }
 
   form{
     background-color:#0249a2;;
     padding: 10px 10px 10px 50px;
     margin-right: 750px;
+    box-shadow: black -13px 13px 10px;
 
     p{
       font-size: 20px;
       font-family:monospace;
+      text-shadow: none;
     }
 
   }
